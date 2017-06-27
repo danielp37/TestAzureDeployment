@@ -69,6 +69,7 @@ fi
 
 selectNodeVersion () {
   if [[ -n "$KUDU_SELECT_NODE_VERSION_CMD" ]]; then
+    echo "Selecting Node Version"
     SELECT_NODE_VERSION="$KUDU_SELECT_NODE_VERSION_CMD \"$DEPLOYMENT_SOURCE\" \"$DEPLOYMENT_TARGET\" \"$DEPLOYMENT_TEMP\""
     eval $SELECT_NODE_VERSION
     exitWithMessageOnError "select node version failed"
@@ -89,6 +90,7 @@ selectNodeVersion () {
 
     NPM_CMD="\"$NODE_EXE\" \"$NPM_JS_PATH\""
   else
+    echo "Defaulting Node Version"
     NPM_CMD=npm
     NODE_EXE=node
   fi
@@ -111,9 +113,9 @@ selectNodeVersion
 
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
-  echo "Insalling NPM Packages"
+  echo "Installing NPM Packages"
   cd "$DEPLOYMENT_TARGET"
-  eval $NPM_CMD install --production
+  eval $NPM_CMD install --production --scripts-prepend-node-path
   exitWithMessageOnError "npm failed"
   cd - > /dev/null
 else
@@ -122,7 +124,7 @@ fi
 
 #4. Build npm
 echo "Building Website Artifacts"
-eval $NPM_CMD run build
+eval $NPM_CMD run build --scripts-prepend-node-path
 
 ##################################################################################################################################
 echo "Finished successfully."
