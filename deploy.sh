@@ -111,10 +111,13 @@ selectNodeVersion
 
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
+  echo "Insalling NPM Packages"
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --production
   exitWithMessageOnError "npm failed"
   cd - > /dev/null
+else
+  echo "Could not find $DEPLOYMENT_TARGET/package.json"
 fi
 
 #4. Build npm
