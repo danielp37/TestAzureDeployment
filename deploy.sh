@@ -128,3 +128,5 @@ eval $NPM_CMD run build --scripts-prepend-node-path
 
 ##################################################################################################################################
 echo "Finished successfully."
+
+#"D:\Program Files (x86)\nodejs\8.0.0\node.exe" "D:\Program Files (x86)\npm\5.0.0\node_modules\npm\bin\npm-cli.js"

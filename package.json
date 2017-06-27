@@ -25,6 +25,8 @@
   "homepage": "https://github.com/danielp37/TestAzureDeployment#readme",
   "dependencies": {
     "@types/node": "^8.0.4",
+    "express": "^4.15.3",
     "typescript": "^2.3.4"
-  }
+  },
+  "devDependencies": {}
 }
