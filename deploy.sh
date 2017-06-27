@@ -117,5 +117,9 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd - > /dev/null
 fi
 
+#4. Build npm
+echo "Building Website Artifacts"
+eval $NPM_CMD run build
+
 ##################################################################################################################################
 echo "Finished successfully."
