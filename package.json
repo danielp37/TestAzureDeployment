@@ -2,9 +2,9 @@
   "name": "testazuredeployment",
   "version": "1.0.0",
   "description": "Testing deploy to Azure",
-  "main": "dist/index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node app.js",
     "build-ts": "tsc"
   },
   "repository": {
