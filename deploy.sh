@@ -124,7 +124,7 @@ fi
 
 #4. Build npm
 echo "Building Website Artifacts"
-eval $NPM_CMD run build --scripts-prepend-node-path
+eval $NPM_CMD run build-ts --scripts-prepend-node-path
 
 ##################################################################################################################################
 echo "Finished successfully."
