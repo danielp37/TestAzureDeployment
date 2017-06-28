@@ -124,7 +124,9 @@ fi
 
 #4. Build npm
 echo "Building Website Artifacts"
+cd "$DEPLOYMENT_TARGET"
 eval "node_modules/typescript/bin/tsc"
+cd - > /dev/null
 
 ##################################################################################################################################
 echo "Finished successfully."
