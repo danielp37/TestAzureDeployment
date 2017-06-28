@@ -4,14 +4,16 @@
   "description": "Testing deploy to Azure",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "build-ts": "node_modules/typescript/bin/tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielp37/TestAzureDeployment.git"
   },
   "engines": {
-    "node": "6.9.1"
+    "node": "7.9.0",
+    "npm": "4.2.0"
   },
   "author": "dpreece",
   "license": "MIT",
