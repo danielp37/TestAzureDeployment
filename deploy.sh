@@ -123,8 +123,8 @@ else
 fi
 
 #4. Build npm
-echo "Building Website Artifacts"
-eval $NPM_CMD run build --scripts-prepend-node-path
+#echo "Building Website Artifacts"
+#eval $NPM_CMD run build --scripts-prepend-node-path
 
 ##################################################################################################################################
 echo "Finished successfully."
