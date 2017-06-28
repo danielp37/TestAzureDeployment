@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build-ts": "node_modules/typescript/bin/tsc"
+    "build-ts": "./node_modules/typescript/bin/tsc"
   },
   "repository": {
     "type": "git",
